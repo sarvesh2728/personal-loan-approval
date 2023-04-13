@@ -1,0 +1,56 @@
+<html><head>
+<title> Loan eligibility prediction</title>
+<body></style></head>
+  <link rel="stylesheet" type="text/css" href=style.css">
+<h1 align="center" >
+Loan eligibility Prediction
+</h1>
+*********************************************************************************************************************************************************************** 
+</hr size="10" >
+<form action="{{url_for('predit')}}" method="post">  <h3 style="text-align:left;"> 
+      <label>Enter your Name:</label>  <br>
+      <input type="text" name="name" placeholder="--Enter a name--" required ="required"> <br>
+<label for="Gender">Gender:</label>
+        <select name="Gender" id="Gender" placeholder="--Select gender--"  >  <br></h3>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+<label for="married_status">Married_status:</label> 
+        <select name="married_status" id="married_status" placeholder="--Select married status--"  >  
+           <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+<label for="education">Education:</label> 
+        <select name="education" id="education" placeholder="--Select Education--"> 
+            <option value="graduate">Graduate</option>
+            <option value="not graduate">Not Graduate</option>
+        </select><br> 
+<label for="selfemp">Self Employed:</label>
+        <select name="selfemp" id="selfemp" placeholder="--Select a Self employed--"> 
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select> <br>  
+<label for="credit">Credit History:</label> 
+        <select name="credit" id="credit" placeholder="--Select a credit history--"> 
+            <option value="0">0</option>
+            <option value="1">1</option>
+           
+        </select><br>
+<label for="area">Property Area:</label>
+        <select name="area" id="area" placeholder="--Select property area--"><br>
+            <option value="rural">Rural</option>
+            <option value="urban">Urban</option>
+          <option value="semiurban">Semi Urban</option>
+ </select>  <br>
+<label>Applicant Income:</label>    
+      <input type="number" name="appincome" placeholder="--Select a Applicant income--"> <br>
+<label>Co-Applicant Income:</label> 
+      <input type="number" name="coappincome" placeholder="--Enter a Co-Applicant income--"> <br>
+    <label>Loan Amount Term:</label>
+  <input type="number" placeholder="--Enter a Loan Amount term--" name="loanamounttream"> <br><br>
+  <button type="submit" class="btn btn-primary btn-block btn-large" align="center">Preditct
+</button>
+  </form><br><br>
+{{ prediction_text }}
+</body>
+</html>
